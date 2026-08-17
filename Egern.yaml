@@ -220,7 +220,7 @@ policy_groups:
   - select:
       name: 兜底分流
       policies:
-        - 自动
+        - 自动优选
         - 🇭🇰 香港
         - 🇺🇸 美国
         - 🇸🇬 狮城
