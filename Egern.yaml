@@ -170,7 +170,7 @@ policy_groups:
         - 手动选择
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
 
-   - select:
+  - select:
       name: 🇭🇰 香港
       policies:
         - 手动选择
