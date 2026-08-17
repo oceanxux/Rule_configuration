@@ -54,6 +54,7 @@ dns:
   proxy_nameservers:
     - 119.29.29.29
     - 223.5.5.5
+
 real_ip_domains:
   - lancache.steamcontent.com
   - '*.msftconnecttest.com'
@@ -72,7 +73,7 @@ real_ip_domains:
   - '*-appboot.netflix.com'
 
 policy_groups:
-  # ================================
+
   - external:
       name: 手动选择
       type: select
@@ -80,60 +81,142 @@ policy_groups:
         - http://your-service-provider
       hidden: false
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
-  # ================================
+
   - auto_test:
       name: 自动
       policies:
         - 手动选择
       flatten: true
       interval: 60
-      tolerance: 50
+      tolerance: 0
       timeout: 5
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
-  # ================================
+
   - select:
       name: 🇭🇰 香港
       policies:
         - 手动选择
       flatten: true
-      filter: '^(?=.*((?i)🇭🇰|香港|(\b(HK|HKG|Hong)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+      filter: '(?i)^(?=.*(🇭🇰|香港|(\b(HK|HKG|Hong)(\d+)?\b))).*$'
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+
   - select:
       name: 🇹🇼 台湾
       policies:
         - 手动选择
       flatten: true
-      filter: '^(?=.*((?i)🇹🇼|台湾|(\b(TW|TWN|Tai|Taiwan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+      filter: '(?i)^(?=.*(🇹🇼|台湾|(\b(TW|TWN|Tai|Taiwan)(\d+)?\b))).*$'
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+
   - select:
       name: 🇯🇵 日本
       policies:
         - 手动选择
       flatten: true
-      filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|JPN|Japan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+      filter: '(?i)^(?=.*(🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|JPN|Japan)(\d+)?\b))).*$'
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+
   - select:
       name: 🇰🇷 韩国
       policies:
         - 手动选择
       flatten: true
-      filter: '^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|KOR|Korea)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+      filter: '(?i)^(?=.*(🇰🇷|韩国|韓|首尔|(\b(KR|KOR|Korea)(\d+)?\b))).*$'
       icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
+
   - select:
       name: 🇸🇬 狮城
       policies:
         - 手动选择
       flatten: true
-      filter: '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|SGP|Singapore)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+      filter: '(?i)^(?=.*(🇸🇬|新加坡|狮|(\b(SG|SGP|Singapore)(\d+)?\b))).*$'
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+
   - select:
       name: 🇺🇸 美国
       policies:
         - 手动选择
       flatten: true
-      filter: '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|USA|United States)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+      filter: '(?i)^(?=.*(🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|USA|United States)(\d+)?\b))).*$'
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-  # ================================
+
+  - select:
+      name: 软媒体
+      policies:
+        - 自动
+        - 🇭🇰 香港
+        - 🇺🇸 美国
+        - 🇸🇬 狮城
+        - 🇯🇵 日本
+        - 🇰🇷 韩国
+        - 🇹🇼 台湾
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+
+  - select:
+      name: 微软
+      policies:
+        - 自动
+        - 🇭🇰 香港
+        - 🇺🇸 美国
+        - 🇸🇬 狮城
+        - 🇯🇵 日本
+        - 🇰🇷 韩国
+        - 🇹🇼 台湾
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
+
+  - select:
+      name: 谷歌服务
+      policies:
+        - 自动
+        - 🇭🇰 香港
+        - 🇺🇸 美国
+        - 🇸🇬 狮城
+        - 🇯🇵 日本
+        - 🇰🇷 韩国
+        - 🇹🇼 台湾
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+
+  - select:
+      name: Telegram
+      policies:
+        - 自动
+        - 🇭🇰 香港
+        - 🇺🇸 美国
+        - 🇸🇬 狮城
+        - 🇯🇵 日本
+        - 🇰🇷 韩国
+        - 🇹🇼 台湾
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+
+  - select:
+      name: 谷歌相关
+      policies:
+        - 自动
+        - 🇭🇰 香港
+        - 🇺🇸 美国
+        - 🇸🇬 狮城
+        - 🇯🇵 日本
+        - 🇰🇷 韩国
+        - 🇹🇼 台湾
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
+
+  - select:
+      name: AI
+      policies:
+        - 自动
+        - 🇭🇰 香港
+        - 🇺🇸 美国
+        - 🇸🇬 狮城
+        - 🇯🇵 日本
+        - 🇰🇷 韩国
+        - 🇹🇼 台湾
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
 
   - select:
       name: 国外网站
@@ -147,96 +230,7 @@ policy_groups:
         - 🇹🇼 台湾
         - 手动选择
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
-  - select:
-      name: 国际媒体
-      policies:
-        - 自动
-        - 🇭🇰 香港
-        - 🇺🇸 美国
-        - 🇸🇬 狮城
-        - 🇯🇵 日本
-        - 🇰🇷 韩国
-        - 🇹🇼 台湾
-        - 手动选择
-      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
-  - select:
-      name: 微软服务
-      policies:
-        - 自动
-        - 🇭🇰 香港
-        - 🇺🇸 美国
-        - 🇸🇬 狮城
-        - 🇯🇵 日本
-        - 🇰🇷 韩国
-        - 🇹🇼 台湾
-        - 手动选择
-      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
-  - select:
-      name: 谷歌服务
-      policies:
-        - 自动
-        - 🇭🇰 香港
-        - 🇺🇸 美国
-        - 🇸🇬 狮城
-        - 🇯🇵 日本
-        - 🇰🇷 韩国
-        - 🇹🇼 台湾
-        - 手动选择
-      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
-  - select:
-      name: 电报消息
-      policies:
-        - 自动
-        - 🇭🇰 香港
-        - 🇺🇸 美国
-        - 🇸🇬 狮城
-        - 🇯🇵 日本
-        - 🇰🇷 韩国
-        - 🇹🇼 台湾
-        - 手动选择
-      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
-  - select:
-      name: 推特消息
-      policies:
-        - 自动
-        - 🇭🇰 香港
-        - 🇺🇸 美国
-        - 🇸🇬 狮城
-        - 🇯🇵 日本
-        - 🇰🇷 韩国
-        - 🇹🇼 台湾
-        - 手动选择
-      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
-  - select:
-      name: AI
-      policies:
-        - 自动
-        - 🇭🇰 香港
-        - 🇺🇸 美国
-        - 🇸🇬 狮城
-        - 🇯🇵 日本
-        - 🇰🇷 韩国
-        - 🇹🇼 台湾
-        - 手动选择
-      icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
-  - select:
-      name: 游戏平台
-      policies:
-        - 自动
-        - 🇭🇰 香港
-        - 🇺🇸 美国
-        - 🇸🇬 狮城
-        - 🇯🇵 日本
-        - 🇰🇷 韩国
-        - 🇹🇼 台湾
-        - 手动选择
-      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
-  - select:
-      name: Emby
-      policies:
-        - 手动选择
-      flatten: true
-      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+
   - select:
       name: 兜底分流
       policies:
@@ -251,7 +245,6 @@ policy_groups:
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
 
 rules:
-
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Direct.yaml
       policy: DIRECT
@@ -263,68 +256,61 @@ rules:
       policy: AI
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Github.yaml
-      policy: Github
+      policy: 微软
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/OneDrive.yaml
-      policy: OneDrive
+      policy: 微软
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Microsoft.yaml
-      policy: Microsoft
+      policy: 微软
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/YouTube.yaml
-      policy: YouTube
+      policy: 软媒体
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Google.yaml
-      policy: Google
+      policy: 谷歌相关
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Telegram.yaml
       policy: Telegram
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Twitter.yaml
-      policy: Twitter
-  - rule_set:
-      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Game.yaml
-      policy: Game
+      policy: 国外网站
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Emby.yaml
-      policy: Emby
+      policy: 软媒体
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Bahamut.yaml
-      policy: Bahamut
+      policy: 软媒体
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Disney.yaml
-      policy: Disney
+      policy: 软媒体
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/HBO.yaml
-      policy: HBO
+      policy: 软媒体
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Netflix.yaml
-      policy: Netflix
+      policy: 软媒体
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Spotify.yaml
-      policy: Spotify
+      policy: 软媒体
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/PrimeVideo.yaml
-      policy: PrimeVideo
+      policy: 软媒体
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/TikTok.yaml
-      policy: TikTok
+      policy: 软媒体
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Proxy.yaml
-      policy: Proxy
-
+      policy: 国外网站
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/AppleServers.yaml
       policy: 🇭🇰 香港
-
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Lan.yaml
       policy: DIRECT
-
   - geoip:
       match: CN
       policy: DIRECT
-
   - default:
       policy: 兜底分流
 
