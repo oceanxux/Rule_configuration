@@ -12,7 +12,7 @@ geoip_db_url: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Count
 asn_db_url: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-ASN.mmdb
 
 proxy_latency_test_url: http://1.1.1.1/generate_204
-direct_latency_test_url: http://connectivitycheck.platform.hicloud.com/generate_204
+direct_latency_test_url: http://www.gstatic.com/generate_204
 
 dns:
   bootstrap:
