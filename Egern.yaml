@@ -229,7 +229,7 @@ policy_groups:
         - 🇰🇷 韩国
         - 🇹🇼 台湾
         - 手动选择
-      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spark.png
 
   - select:
       name: 兜底分流
@@ -275,9 +275,6 @@ rules:
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Twitter.yaml
       policy: 国外网站
-  - rule_set:
-      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Emby.yaml
-      policy: 软媒体
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Bahamut.yaml
       policy: 软媒体
