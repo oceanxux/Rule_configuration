@@ -78,7 +78,7 @@ policy_groups:
       name: 手动选择
       type: select
       urls:
-        - http://your-service-provider
+        - 
       hidden: false
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
 
