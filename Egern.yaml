@@ -93,6 +93,84 @@ policy_groups:
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
 
   - select:
+      name: 谷歌服务
+      policies:
+        - 自动
+        - 🇭🇰 香港
+        - 🇺🇸 美国
+        - 🇸🇬 狮城
+        - 🇯🇵 日本
+        - 🇰🇷 韩国
+        - 🇹🇼 台湾
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+
+  - select:
+      name: 微软
+      policies:
+        - 自动
+        - 🇭🇰 香港
+        - 🇺🇸 美国
+        - 🇸🇬 狮城
+        - 🇯🇵 日本
+        - 🇰🇷 韩国
+        - 🇹🇼 台湾
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
+      
+  - select:
+      name: Telegram
+      policies:
+        - 自动
+        - 🇭🇰 香港
+        - 🇺🇸 美国
+        - 🇸🇬 狮城
+        - 🇯🇵 日本
+        - 🇰🇷 韩国
+        - 🇹🇼 台湾
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+
+  - select:
+      name: AI
+      policies:
+        - 自动
+        - 🇭🇰 香港
+        - 🇺🇸 美国
+        - 🇸🇬 狮城
+        - 🇯🇵 日本
+        - 🇰🇷 韩国
+        - 🇹🇼 台湾
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+
+  - select:
+      name: 国外网站
+      policies:
+        - 自动
+        - 🇭🇰 香港
+        - 🇺🇸 美国
+        - 🇸🇬 狮城
+        - 🇯🇵 日本
+        - 🇰🇷 韩国
+        - 🇹🇼 台湾
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Puzzle.png
+
+  - select:
+      name: 软媒体
+      policies:
+        - 自动
+        - 🇭🇰 香港
+        - 🇺🇸 美国
+        - 🇸🇬 狮城
+        - 🇯🇵 日本
+        - 🇰🇷 韩国
+        - 🇹🇼 台湾
+        - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+
+   - select:
       name: 🇭🇰 香港
       policies:
         - 手动选择
@@ -139,84 +217,6 @@ policy_groups:
       flatten: true
       filter: '(?i)^(?=.*(🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|USA|United States)(\d+)?\b))).*$'
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-
-  - select:
-      name: 软媒体
-      policies:
-        - 自动
-        - 🇭🇰 香港
-        - 🇺🇸 美国
-        - 🇸🇬 狮城
-        - 🇯🇵 日本
-        - 🇰🇷 韩国
-        - 🇹🇼 台湾
-        - 手动选择
-      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
-
-  - select:
-      name: 微软
-      policies:
-        - 自动
-        - 🇭🇰 香港
-        - 🇺🇸 美国
-        - 🇸🇬 狮城
-        - 🇯🇵 日本
-        - 🇰🇷 韩国
-        - 🇹🇼 台湾
-        - 手动选择
-      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
-
-  - select:
-      name: 谷歌服务
-      policies:
-        - 自动
-        - 🇭🇰 香港
-        - 🇺🇸 美国
-        - 🇸🇬 狮城
-        - 🇯🇵 日本
-        - 🇰🇷 韩国
-        - 🇹🇼 台湾
-        - 手动选择
-      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
-
-  - select:
-      name: Telegram
-      policies:
-        - 自动
-        - 🇭🇰 香港
-        - 🇺🇸 美国
-        - 🇸🇬 狮城
-        - 🇯🇵 日本
-        - 🇰🇷 韩国
-        - 🇹🇼 台湾
-        - 手动选择
-      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
-
-  - select:
-      name: AI
-      policies:
-        - 自动
-        - 🇭🇰 香港
-        - 🇺🇸 美国
-        - 🇸🇬 狮城
-        - 🇯🇵 日本
-        - 🇰🇷 韩国
-        - 🇹🇼 台湾
-        - 手动选择
-      icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
-
-  - select:
-      name: 国外网站
-      policies:
-        - 自动
-        - 🇭🇰 香港
-        - 🇺🇸 美国
-        - 🇸🇬 狮城
-        - 🇯🇵 日本
-        - 🇰🇷 韩国
-        - 🇹🇼 台湾
-        - 手动选择
-      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Puzzle.png
   - select:
       name: 兜底分流
       policies:
