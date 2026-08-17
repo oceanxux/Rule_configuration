@@ -78,12 +78,12 @@ policy_groups:
       name: 手动选择
       type: select
       urls:
-        - 
+        - http://your-service-provider
       hidden: false
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
 
   - auto_test:
-      name: 自动
+      name: 自动优选
       policies:
         - 手动选择
       flatten: true
@@ -193,19 +193,6 @@ policy_groups:
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
 
   - select:
-      name: 谷歌相关
-      policies:
-        - 自动
-        - 🇭🇰 香港
-        - 🇺🇸 美国
-        - 🇸🇬 狮城
-        - 🇯🇵 日本
-        - 🇰🇷 韩国
-        - 🇹🇼 台湾
-        - 手动选择
-      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
-
-  - select:
       name: AI
       policies:
         - 自动
@@ -229,8 +216,7 @@ policy_groups:
         - 🇰🇷 韩国
         - 🇹🇼 台湾
         - 手动选择
-      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spark.png
-
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Puzzle.png
   - select:
       name: 兜底分流
       policies:
@@ -245,69 +231,83 @@ policy_groups:
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
 
 rules:
+
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Direct.yaml
       policy: DIRECT
+
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Reject.yaml
       policy: REJECT
+
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/AI.yaml
       policy: AI
+
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Github.yaml
       policy: 微软
+
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/OneDrive.yaml
       policy: 微软
+
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Microsoft.yaml
       policy: 微软
+
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/YouTube.yaml
       policy: 软媒体
+
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Google.yaml
-      policy: 谷歌相关
+      policy: 谷歌服务
+
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Telegram.yaml
       policy: Telegram
-  - rule_set:
-      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Twitter.yaml
-      policy: 国外网站
+
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Bahamut.yaml
       policy: 软媒体
+
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Disney.yaml
       policy: 软媒体
+
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/HBO.yaml
       policy: 软媒体
+
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Netflix.yaml
       policy: 软媒体
+
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Spotify.yaml
       policy: 软媒体
+
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/PrimeVideo.yaml
       policy: 软媒体
-  - rule_set:
-      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/TikTok.yaml
-      policy: 软媒体
+
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Proxy.yaml
       policy: 国外网站
+
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/AppleServers.yaml
       policy: 🇭🇰 香港
+
   - rule_set:
       match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Lan.yaml
       policy: DIRECT
+
   - geoip:
       match: CN
       policy: DIRECT
+
   - default:
       policy: 兜底分流
 
