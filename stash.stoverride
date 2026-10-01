@@ -1,4 +1,5 @@
 name: 'sam_for_stash'
+## 放到programData\stash\override
 dns:
   default-nameserver: #!replace
     - 223.5.5.5
